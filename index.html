@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geek Servise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">Geek Servise</div>
+
+          <!-- Гамбургер -->
+          <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- Меню -->
+          <nav class="nav" id="nav">
+            <ul class="nav-links" id="navLinks">
+              <li><a href="#about">О курсах</a></li>
+              <li><a href="#programs">Программы</a></li>
+              <li><a href="#features">Особенности</a></li>
+              <li><a href="#reviews">Отзывы</a></li>
+              <li><a href="#contact">Записаться</a></li>
+            </ul>
+          </nav>
+
+          <!-- Кнопка закрытия -->
+          <button class="menu-close" id="menuClose">×</button>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <h1>
+          Geek Servise — образование для качественных изменений в карьере и
+          жизни
+        </h1>
+        <p>100 000+ выпускников</p>
+        <a href="#contact" class="btn btn-primary">Начать обучение</a>
+      </div>
+    </section>
+    <!-- О нас -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2>Почему выбирают нас?</h2>
+            <ul class="advantages">
+              <li class="advantage-item">
+                <span class="badge">1</span>
+                <strong>Практика с первого дня</strong>
+                <small
+                  >Вы создаёте реальные проекты, которые войдут в ваше
+                  портфолио.</small
+                >
+              </li>
+              <li class="advantage-item">
+                <span class="badge">2</span>
+                <strong>Поддержка опытных наставников</strong>
+                <small
+                  >Каждый студент получает обратную связь от
+                  IT-специалистов.</small
+                >
+              </li>
+              <li class="advantage-item">
+                <span class="badge">3</span>
+                <strong>Сертификат о прохождении обучения</strong>
+                <small
+                  >Документ, который добавляется в резюме или LinkedIn.</small
+                >
+              </li>
+              <li class="advantage-item">
+                <span class="badge">4</span>
+                <strong>Помощь в трудоустройстве</strong>
+                <small>Резюме, портфолио, подготовка к собеседованиям.</small>
+              </li>
+              <li class="advantage-item">
+                <span class="badge">5</span>
+                <strong>Обучение по IT-стандартам</strong>
+                <small>Соответствует требованиям крупных компаний.</small>
+              </li>
+              <li class="advantage-item">
+                <span class="badge">6</span>
+                <strong>Гибкий график</strong>
+                <small>Учитесь днём, вечером или выходные.</small>
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Записаться на курс</a>
+          </div>
+          <div class="col-md-6">
+            <div class="image-wrapper">
+              <img
+                src="/img/img1.png"
+                alt="IT Обучение"
+                class="full-width-img"
+              />
+            </div>
+            <div class="stats">
+              <div class="stat-item"><strong>90%+</strong> находят работу</div>
+              <div class="stat-item">
+                <strong>6 мес.</strong> до трудоустройства
+              </div>
+              <div class="stat-item"><strong>10 000+</strong> студентов</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Карточки программ -->
+    <section id="programs" class="section programs bg-light">
+      <div class="container">
+        <h2 class="text-center">Наши программы</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Frontend-разработка</h3>
+            <p>
+              HTML, CSS, JavaScript, React, Vue, TypeScript. Создавайте
+              современные интерфейсы.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Backend-разработка</h3>
+            <p>
+              Node.js, Python, Django, Java, REST API, PostgreSQL. Строите
+              серверную логику и базы данных.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Тестирование (QA)</h3>
+            <p>
+              Ручное и автоматизированное тестирование, Postman, Selenium, Jira,
+              SQL.
+            </p>
+          </div>
+          <div class="card">
+            <h3>DevOps инженер</h3>
+            <p>
+              Docker, Kubernetes, CI/CD, Linux, AWS, Azure. Настройка и
+              автоматизация инфраструктуры.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Анализ двнных</h3>
+            <p>
+              PostgreSQL, SQL, Python для анализа данных, Power BI, Excel,
+              Tableau.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Машинное обучение / AI</h3>
+            <p>
+              Python, TensorFlow, PyTorch, Numpy, Pandas, Scikit-learn, ChatGPT
+              и другие модели ИИ.
+            </p>
+          </div>
+          <div class="card">
+            <h3>UX/UI дизайн</h3>
+            <p>
+              Figma, Adobe XD, Прототипирование, Юзабилити-тестирование, Дизайн
+              систем.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Графический дизайн</h3>
+            <p>
+              Photoshop, Illustrator, InDesign, Branding, Motion Design,
+              Видео-редактирование.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Мобильная разработка (Android)</h3>
+            <p>
+              Kotlin, Java, Jetpack Compose, Firebase, Android Studio.
+              Разрабатывайте приложения под Android.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Мобильная разработка (iOS)</h3>
+            <p>
+              Swift, SwiftUI, UIKit, Xcode. Создавайте приложения под iPhone и
+              iPad.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Кибербезопасность</h3>
+            <p>
+              Ethical Hacking, Pentesting, Kali Linux, Network Security, SOC
+              Analyst, Digital Forensics.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Product Management</h3>
+            <p>
+              Product Discovery, Roadmap, Agile, OKR, MVP, Работа с командой,
+              Запуск продуктов.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="features" class="section features">
+      <div class="container">
+        <h2 class="text-center">Почему мы лучшие</h2>
+        <div class="grid">
+          <div class="feature-item">
+            <div class="icon-box"><span>1</span></div>
+            <h4>Экспертные менторы</h4>
+            <p>Учитесь у действующих специалистов из крупных компаний.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-box"><span>2</span></div>
+            <h4>Практические задания</h4>
+            <p>Работайте над реальными проектами, как в настоящей работе.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-box"><span>3</span></div>
+            <h4>Помощь с трудоустройством</h4>
+            <p>
+              Резюме, портфолио, собеседования — поможем найти первую работу.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-box"><span>4</span></div>
+            <h4>Гибкий график</h4>
+            <p>Выбирайте удобное время занятий: дневное или вечернее.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-box"><span>5</span></div>
+            <h4>IT-проекты в портфолио</h4>
+            <p>
+              Создайте реальные проекты, которые вы сможете показать
+              работодателю.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-box"><span>6</span></div>
+            <h4>Обучение по IT-стандартам</h4>
+            <p>
+              Курсы соответствуют требованиям Google, Яндекс, Ozon и других
+              крупных компаний.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-box"><span>7</span></div>
+            <h4>Статистика трудоустройства</h4>
+            <p>
+              Более 90% выпускников находят работу уже через 3 месяца после
+              курса.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="icon-box"><span>8</span></div>
+            <h4>Поддержка сообщества</h4>
+            <p>
+              Чаты выпускников, Slack, Discord и поддержка даже после обучения.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="section reviews bg-light">
+      <div class="container">
+        <h2 class="text-center">Отзывы студентов</h2>
+        <div class="review-cards">
+          <div class="review-card">
+            <p>
+              «Курс дал мне все необходимые знания для работы
+              frontend-разработчиком. Уже через 5 месяцев я нашёл работу!»
+            </p>
+            <strong>— Алексей Иванов</strong>
+          </div>
+          <div class="review-card">
+            <p>
+              «Огромное спасибо менторам за поддержку и терпение. Очень доволен
+              уровнем обучения и возможностями после курса.»
+            </p>
+            <strong>— Мария Петрова</strong>
+          </div>
+          <div class="review-card">
+            <p>
+              «Хорошая структура обучения, много практики и интересных задач.
+              Рекомендую всем, кто хочет сменить профессию.»
+            </p>
+            <strong>— Дмитрий Смирнов</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма контактов -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="text-center">Запишитесь прямо сейчас</h2>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Ваше имя</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Иван Иванов"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="program">Выберите программу</label>
+            <select id="program" name="program" required>
+              <option value="">Выберите программу</option>
+              <option>Frontend-разработка</option>
+              <option>Backend-разработка</option>
+              <option>Тестирование (QA)</option>
+              <option>DevOps инженер</option>
+              <option>Анализ данных</option>
+              <option>Машинное обучение</option>
+              <option>UX/UI Дизайн</option>
+              <option>Графический дизайн</option>
+              <option>Мобильная разработка (Android)</option>
+              <option>Мобильная разработка (iOS)</option>
+              <option>Кибербезопасность</option>
+              <option>Product Management</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Сообщение</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Ваше сообщение..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">
+            Отправить заявку
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init("xdXtSVt7aFpIctRwE");
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const btn = this.querySelector("button[type='submit']");
+          const originalText = btn.innerText;
+          btn.innerText = "Отправка...";
+          emailjs.sendForm("service_mf77bel", "template_mn89k9k", this).then(
+            () => {
+              alert("Заявка успешно отправлена!");
+              document.getElementById("contact-form").reset();
+              btn.innerText = originalText;
+            },
+            (error) => {
+              alert("Ошибка: не удалось отправить заявку.");
+              btn.innerText = originalText;
+              console.error("EmailJS Error:", error);
+            }
+          );
+        });
+    </script>
+
+    <!-- Гамбургер-меню -->
+    <script>
+      if (menuToggle && menuClose && navLinks) {
+        // Открытие меню на мобильных
+        menuToggle.addEventListener("click", () => {
+          nav.classList.add("open");
+          menuToggle.style.display = "none";
+          menuClose.style.display = "block";
+        });
+
+        // Закрытие по крестику
+        menuClose.addEventListener("click", () => {
+          nav.classList.remove("open");
+          menuToggle.style.display = "flex";
+          menuClose.style.display = "none";
+        });
+
+        // Закрытие при клике на ссылку
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+              nav.classList.remove("open");
+              menuToggle.style.display = "flex";
+              menuClose.style.display = "none";
+            }
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

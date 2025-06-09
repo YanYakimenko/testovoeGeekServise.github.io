@@ -1,0 +1,517 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #000000;
+  color: white;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.829);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #ffffffb0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background: #ff6b00;
+  color: black;
+}
+
+.btn:hover {
+  background: #e05d00;
+  transform: scale(1.1);
+}
+
+.full-width {
+  width: 100%;
+}
+
+header {
+  background: #000000;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(255, 107, 0, 0.3);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff6b00;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Гамбургер и крестик */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #ff6b00;
+  transition: all 0.3s ease;
+}
+
+.menu-close {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #ff6b00;
+  cursor: pointer;
+  z-index: 1002;
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover,
+.menu-close:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 6rem;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .nav.open {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .menu-close {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav.open ~ .menu-close {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Анимация гамбургера в крестик */
+  .menu-toggle span:nth-child(1) {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  .menu-toggle span:nth-child(2) {
+    opacity: 1;
+  }
+
+  .menu-toggle span:nth-child(3) {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  .nav.open ~ .menu-toggle span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .nav.open ~ .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav.open ~ .menu-toggle span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+.hero {
+  background: linear-gradient(to right, #1a1a1a, #000000);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ff6b00;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #cccccc;
+}
+
+/* о наас */
+.section.about {
+  background-color: #000000;
+  padding: 6rem 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+}
+
+.col-md-6 {
+  flex: 1;
+  min-width: 300px;
+}
+
+.advantages {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.advantage-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: #cccccc;
+  cursor: pointer;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background-color: #ff6b00;
+  color: black;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.advantage-item:hover .badge {
+  transform: scale(1.1);
+}
+
+.advantage-item strong {
+  color: white;
+  font-size: 1rem;
+}
+
+.advantage-item small {
+  display: block;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(255, 107, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.full-width-img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.stats {
+  margin-top: 2rem;
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.1);
+}
+
+.stat-item {
+  margin-bottom: 1rem;
+}
+
+.stat-item strong {
+  color: #ff6b00;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/* Карточки */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(255, 106, 0, 0.212);
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.card h3 {
+  color: #ff6b00;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #cccccc;
+}
+
+/* Преимущества */
+.section.features {
+  background-color: #1a1a1a;
+  padding: 5rem 2rem;
+}
+
+.feature-item {
+  background: #222222;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(255, 107, 0, 0.15);
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b00, #e05d00);
+  color: black;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover .icon-box {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.feature-item h4 {
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Отзывы */
+.section.reviews {
+  background-color: #1a1a1a;
+  padding: 5rem 2rem;
+}
+
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.review-card {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(255, 107, 0, 0.1);
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+/* Форма контактов */
+.contact-form {
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: #ff6b00;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #cccccc;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #222222;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.3);
+  background-color: #2a2a2a;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
